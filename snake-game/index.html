@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Snake Game</title>
+  <style>
+    @import url(style.css);
+  </style>
+</head>
+
+<body>
+  <div id="loading">Loading&#8230</div>
+  <div id="container"></div>
+  <script src="./jquery-3.1.1.js"></script>
+  <script src="./snake.js"></script>
+  <script>
+  $(function() {
+  $("#loading").hide();
+
+  var $container = $("#container");
+
+  // create the snake
+  var head = new SnakePiece($container);
+  var pieces = [head];
+  for(var i=0; i < 20; i++){
+    head.extend();
+  }
+  console.log(head);
+
+  // update the snake
+  setInterval(function() {
+    head.update();
+  }, 50)
+
+  // listen for keypresses
+  $(document.body).on("keydown", function(e) {
+    switch (e.which) {
+      case 38:
+        head.setDirection(0, -1.5);
+        break; // up
+      case 40:
+        head.setDirection(0, 1.5);
+        break; // down
+      case 37:
+        head.setDirection(-1.5, 0);
+        break; // left
+      case 39:
+        head.setDirection(1.5, 0);
+        break; // right
+    }
+  });
+});
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM-Manipulation</title>
+</head>
+<body>
+  <ul id="list" class="foo">
+  <li>#0</li>
+  <li><span>#1</span></li>
+  <li>#2</li>
+  <li>#3</li>
+  <li><ul><li>#4</li></ul></li>
+  <li><a href="//v2ex.com">#5</a></li>
+  <li>#6</li>
+  <li>#7</li>
+  <li>#8</li>
+  <li>#9</li>
+  <li>#10</li>
+  <li>#11</li>
+  <li>#12</li>
+  <li>#13</li>
+</ul>
+
+<!-- 为 <ul> 添加一个类 bar
+删除第 10 个 <li>
+在第 500 个 <li> 后面增加一个 <li> , 其文字内容为 <v2ex.com />
+点击任意 <li> 弹窗显示其为当前列表中的第几项。 -->
+<script>
+  function addAnotherClass(classText){
+    document.getElementById('list').className += (' '+ classText);
+  }
+  addAnotherClass('bar');
+
+  // classList.add('bar')
+
+
+  function deleteListItem(index) {
+    document.getElementById("list").children[index].remove();
+  }
+  deleteListItem(10);
+
+
+  function addListItem(index, content){
+    var newElement = document.createElement('li');
+    var newContent = document.createTextNode(content);
+    newElement.appendChild(newContent);
+
+    var parentElement = document.getElementById('list');
+    var currentElement = parentElement.children[index];
+
+    parentElement.insertBefore(newElement, currentElement);
+  }
+  addListItem(11, '<v2ex.com />');
+
+  function clickAlert(){
+    var parentElement = document.getElementById("list");
+
+    function alertTarget(e){
+       if(e.target && e.target.nodeName === "LI") {
+         alert(Array.from(parentElement.children).indexOf(e.target));
+      }
+    }
+
+    parentElement.addEventListener('click', alertTarget);
+  }
+  clickAlert();
+
+
+</script>
+</body>
+</html>
