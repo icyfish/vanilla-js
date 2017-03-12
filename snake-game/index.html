@@ -39,16 +39,16 @@
   $(document.body).on("keydown", function(e) {
     switch (e.which) {
       case 38:
-        head.setDirection(0, -1.5);
+        head.setDirection(0, -1);
         break; // up
       case 40:
-        head.setDirection(0, 1.5);
+        head.setDirection(0, 1);
         break; // down
       case 37:
-        head.setDirection(-1.5, 0);
+        head.setDirection(-1, 0);
         break; // left
       case 39:
-        head.setDirection(1.5, 0);
+        head.setDirection(1, 0);
         break; // right
     }
   });
