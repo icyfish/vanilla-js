@@ -8,7 +8,11 @@
 
 - [03-CSS变量](https://icyfish.github.io/vanilla-js/wesbos-js/03-css-variables/)
 
-- [06-Type-Ahead](https://icyfish.github.io/vanilla-js/wesbos-js/06-type-ahead/) 
+- [06-搜索高亮](https://icyfish.github.io/vanilla-js/wesbos-js/06-type-ahead/)
+
+- [09-Chrome开发者工具技巧](https://icyfish.github.io/vanilla-js/wesbos-js/09-dev-tools/)
+
+- [10-shift多选](https://icyfish.github.io/vanilla-js/wesbos-js/10-shift-checkbox/)
 
 - [13-图片随滚动出现](https://icyfish.github.io/vanilla-js/wesbos-js/13-slide-scroll/) | [13-笔记](https://github.com/icyfish/vanilla-js/blob/master/wesbos-js/13-slide-scroll/13-notes.md)
 
