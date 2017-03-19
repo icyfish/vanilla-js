@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+  // 读取键盘输入,如果键盘输入与secretCode相符,显示一些特效
+
+  const pressed = []; // 初始化一个数组用以存储键盘输入
+  const secretCode = 'haha'; 
+  window.addEventListener('keyup', (e) => {
+    pressed.push(e.key); // 将每一个键盘输入存入数组
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length); //截取与secretCode长度相同的输入, 总是取后输入的部分
+
+    if(pressed.join('').includes(secretCode)){
+      cornify_add();
+    }
+  })
+ 
+</script>
+</body>
+</html>

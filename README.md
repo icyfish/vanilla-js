@@ -14,6 +14,8 @@
 
 - [10-shift多选](https://icyfish.github.io/vanilla-js/wesbos-js/10-shift-checkbox/)
 
+- [12-读取键盘输入](https://icyfish.github.io/vanilla-js/wesbos-js/12-key-detection/)
+
 - [13-图片随滚动出现](https://icyfish.github.io/vanilla-js/wesbos-js/13-slide-scroll/) | [13-笔记](https://github.com/icyfish/vanilla-js/blob/master/wesbos-js/13-slide-scroll/13-notes.md)
 
 - [贪吃蛇(简单版)原始版](https://icyfish.github.io/vanilla-js/snake-game/prototype.html)
