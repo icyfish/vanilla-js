@@ -18,6 +18,8 @@
 
 - [13-图片随滚动出现](https://icyfish.github.io/vanilla-js/wesbos-js/13-slide-scroll/) | [13-笔记](https://github.com/icyfish/vanilla-js/blob/master/wesbos-js/13-slide-scroll/13-notes.md)
 
+- [14-JS引用和拷贝](https://icyfish.github.io/vanilla-js/wesbos-js/14-js-ref-copy/)
+
 - [贪吃蛇(简单版)原始版](https://icyfish.github.io/vanilla-js/snake-game/prototype.html)
 
 - [贪吃蛇(简单版)优化版](https://icyfish.github.io/vanilla-js/snake-game/): 代码更简洁规范

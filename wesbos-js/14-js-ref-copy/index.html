@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Reference VS Copy</title>
+</head>
+<body>
+
+<script>
+  // 字符串, 数字, 布尔值: 通过拷贝传递(pass by copy)
+
+  let age = 100;
+  let age2 = age;
+  
+  console.log(age,age2);
+
+  age = 200;
+  console.log(age,age2);
+  
+  let greet = "hello";
+  let greet2 = greet;
+  
+  console.log(greet,greet2);
+  greet = "halo";
+  console.log(greet,greet2);
+
+  // 数组通过引用传递(pass by reference)
+
+  const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+ 
+  const team = players;
+  console.log(players, team);
+
+  team[3] = 'Lux';
+  console.log(players, team);
+
+  // 如果想创建原数组的拷贝, 
+  // 可以使用slice或concat
+  // 或ES6中的spread操作符或Array.from方法
+
+  const team2 = players.slice();
+  team2[0] = 'Bos';
+  console.log(players, team2);
+  
+
+  const team3 = [].concat(players); 
+  team3[1] = 'Bos';  
+  console.log(players, team3);
+  
+
+  const team4 = [...players];
+  team4[2] = 'Bos';
+  console.log(players, team4);
+  
+  
+  const team5 = Array.from(players);
+  team5[3] = 'Bos';
+  console.log(players, team5);
+  
+
+  // 对象也通过引用传递
+
+  const person = {
+    name: "Wes Bos",
+    age: 80
+  };
+
+  const captain = person;
+  captain.number = 2;
+  console.log(person, captain);
+  
+
+  // 拷贝对象, 使用Object.assign():
+
+  const cap2 = Object.assign({}, person, { number: 2, age: 12 });
+  console.log(person, cap2);
+  
+  
+  // 也可这样拷贝, 浏览器暂时不支持
+  // const cap3 = {...person};
+
+  
+ 
+  const wes = {
+    name: 'Wes',
+    age: 100,
+    social: {
+      twitter: '@wesbos',
+      facebook: 'wesbos.developer'
+    }
+  }
+
+  
+  // Object.assign()是浅拷贝, 只拷贝一层, 再深一层就是通过引用传递了:
+
+  const dev = Object.assign({},wes);
+  console.log(wes, dev);
+
+  dev.name = 'Wesley';
+  console.log(wes.name);
+  console.log(dev.name);
+
+  dev.social.twitter = '@wesley';
+  console.log(wes.social.twitter); 
+  console.log(dev.social.twitter); 
+
+
+  // lodash库实现了一个深拷贝的方法: lodash.cloneDeep()
+  
+  // 也可以自己这样实现深拷贝, 但是不推荐用: 
+
+  const dev2 = JSON.parse(JSON.stringify(wes));
+
+  dev2.social.twitter = '@wes'; 
+
+  console.log(wes.social.twitter); 
+  console.log(dev2.social.twitter); 
+
+</script>
+
+</body>
+</html>
