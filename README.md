@@ -1,8 +1,10 @@
-### Practice
+## Practice and Notes
 
-#### in Learning Vanilla JS and Writing Better Code
+in Learning Vanilla JS and Writing Better Code
 
 **Some notes are written in the comment of code.**
+
+### [Wesbos-JavaScript30](https://github.com/wesbos/JavaScript30/)
 
 - 01-JS爵士鼓 | [Code](https://github.com/icyfish/vanilla-js/blob/master/wesbos-js/01-js-drum-kit/index.html) | [Demo](https://icyfish.github.io/vanilla-js/wesbos-js/01-js-drum-kit/) | [01-Notes](https://github.com/icyfish/vanilla-js/blob/master/wesbos-js/01-js-drum-kit/01-notes.md)
 
@@ -27,6 +29,8 @@
 - 16-鼠标移动阴影 | [Code](https://github.com/icyfish/vanilla-js/blob/master/wesbos-js/16-mouse-move-shadow/index.html) | [Demo](https://icyfish.github.io/vanilla-js/wesbos-js/16-mouse-move-shadow/)
 
 - [04, 07, 17, 18-数组相关](https://icyfish.me/2016/12/29/array-methods/)
+
+## Others
 
 - 贪吃蛇(简单版)原始版 | [Code](https://github.com/icyfish/vanilla-js/blob/master/snake-game/prototype.html) | [Demo](https://icyfish.github.io/vanilla-js/snake-game/prototype.html)
 
