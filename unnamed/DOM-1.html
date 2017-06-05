@@ -13,7 +13,7 @@
   <li>#2</li>
   <li>#3</li>
   <li><ul><li>#4</li></ul></li>
-  <li><a href="//v2ex.com">#5</a></li>
+  <li><a target="_blank" href="https://icyfish.me">#5</a></li>
   <li>#6</li>
   <li>#7</li>
   <li>#8</li>
@@ -24,17 +24,29 @@
   <li>#13</li>
 </ul>
 
-<!-- 为 <ul> 添加一个类 bar
-删除第 10 个 <li>
-在第 500 个 <li> 后面增加一个 <li> , 其文字内容为 <v2ex.com />
-点击任意 <li> 弹窗显示其为当前列表中的第几项。 -->
-<script>
-  function addAnotherClass(classText){
-    document.getElementById('list').className += (' '+ classText);
-  }
-  addAnotherClass('bar');
+<!-- 
 
-  // classList.add('bar')
+  1. 为 <ul> 添加一个类 bar
+  2. 删除第 10 个 <li>
+  3. 为 <li> 添加颜色
+  4. 在第 11 个 <li> 后面增加一个 <li> , 其文字内容为 "inserted element"
+  5. 点击任意 <li> 弹窗显示其为当前列表中的第几项以及列表的文字内容。 
+    
+-->
+<script>
+  function addClassToUl(classText){
+    // document.getElementById('list').className += (' '+ classText);
+    document.getElementById('list').classList.add(classText);
+  }
+  addClassToUl('bar');
+
+
+  function addColorToLi(index, color){
+    Array.from(document.getElementById('list').children)[index].style.backgroundColor = color;
+  };
+  addColorToLi(2, 'lightgreen');
+  addColorToLi(4, 'lightblue');
+  addColorToLi(6, 'lightpink');
 
 
   function deleteListItem(index) {
@@ -53,14 +65,15 @@
 
     parentElement.insertBefore(newElement, currentElement);
   }
-  addListItem(11, '<v2ex.com />');
+  addListItem(11, 'inserted element');
+
 
   function clickAlert(){
     var parentElement = document.getElementById("list");
 
     function alertTarget(e){
        if(e.target && e.target.nodeName === "LI") {
-         alert(Array.from(parentElement.children).indexOf(e.target));
+         alert(`The index is ${Array.from(parentElement.children).indexOf(e.target)}, the content is ${e.target.innerText}`);
       }
     }
 
