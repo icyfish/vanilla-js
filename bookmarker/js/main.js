@@ -56,41 +56,45 @@ function fetchBookmarks(){
   var bookmarksResults = document.getElementById('bookmarksResults');
 
   bookmarksResults.innerHTML = "";
+
+  if(bookmarks){
+    var bookmarkList = bookmarks.map((mark) => {
+      return (
+        `<div class="well">
+          <h3>${mark.name}:  
+            <a class="btn btn-default" href="${mark.url}" target="_blank">Visit</a>
+            <a onclick="deleteBookmark('${mark.url}')" class="btn btn-danger" href="">Delete</a>
+          </h3>
+        </div>`
+      )
+    })
+    
+    // bookmarksResults.innerHTML = bookmarkList;
+
+    /* 直接👆这样加每个item之间多了逗号, 因此👇这样渲染*/
+
+    bookmarkList.forEach(bookmarkItem => {
+      bookmarksResults.innerHTML += bookmarkItem;
+    })
+
+
+  /* ES5 方法*/
+
+  // bookmarksResults.innerHTML = '';
+  // for(var i = 0; i < bookmarks.length; i++){
+  //   var name = bookmarks[i].name;
+  //   var url = bookmarks[i].url;
+
+  //   bookmarksResults.innerHTML += '<div class="well">'+
+  //                                 '<h3>'+name+
+  //                                 ' <a class="btn btn-default" target="_blank" href="'+url+'">Visit</a> ' +
+  //                                 ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Delete</a> ' +
+  //                                 '</h3>'+
+  //                                 '</div>';
+  // }
+
+  }
   
-  var bookmarkList = bookmarks.map((mark) => {
-    return (
-      `<div class="well">
-        <h3>${mark.name}:  
-          <a class="btn btn-default" href="${mark.url}" target="_blank">Visit</a>
-          <a onclick="deleteBookmark('${mark.url}')" class="btn btn-danger" href="">Delete</a>
-        </h3>
-      </div>`
-    )
-  })
-  
-  // bookmarksResults.innerHTML = bookmarkList;
-
-  /* 直接👆这样加每个item之间多了逗号, 因此👇这样渲染*/
-
-  bookmarkList.forEach(bookmarkItem => {
-    bookmarksResults.innerHTML += bookmarkItem;
-  })
-
-
- /* ES5 方法*/
-
-// bookmarksResults.innerHTML = '';
-// for(var i = 0; i < bookmarks.length; i++){
-//   var name = bookmarks[i].name;
-//   var url = bookmarks[i].url;
-
-//   bookmarksResults.innerHTML += '<div class="well">'+
-//                                 '<h3>'+name+
-//                                 ' <a class="btn btn-default" target="_blank" href="'+url+'">Visit</a> ' +
-//                                 ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Delete</a> ' +
-//                                 '</h3>'+
-//                                 '</div>';
-// }
 
 }
  
