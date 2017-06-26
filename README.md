@@ -32,6 +32,8 @@ in Learning Vanilla JS and Writing Better Code
 
 ## Others
 
+- 简单的书签应用 | [Code](https://github.com/icyfish/vanilla-js/blob/master/bookmarker/) | [Demo](https://icyfish.github.io/vanilla-js/bookmarker/)
+
 - 贪吃蛇(简单版)原始版 | [Code](https://github.com/icyfish/vanilla-js/blob/master/snake-game/prototype.html) | [Demo](https://icyfish.github.io/vanilla-js/snake-game/prototype.html)
 
 - 贪吃蛇(简单版)优化版 | [Code](https://github.com/icyfish/vanilla-js/blob/master/snake-game/snake.js) | [Demo](https://icyfish.github.io/vanilla-js/snake-game/): 代码更简洁规范

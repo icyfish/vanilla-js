@@ -1,4 +1,4 @@
-(function(){
+ 
   document.getElementById('myForm').addEventListener('submit', saveBookmark);
 
   function saveBookmark(e){
@@ -121,5 +121,4 @@ function fetchBookmarks(){
     return false;
   }
  };
-
-})()
+ 
