@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+#navbar a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  margin: 0 10px;
+  padding: 0 8px;
+  color: black;
+  text-decoration: none;
+
+  border: 2px solid;
+  border-color: white;
+  border-radius: 20px;
+} 
+
+#navbar a:hover {
+  border-color: black;
+}
+#navbar a:active {
+  border-color: gray;
+}

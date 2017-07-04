@@ -32,6 +32,8 @@ in Learning Vanilla JS and Writing Better Code
 
 ## Others
 
+- 单页应用导航 | [Code](https://github.com/icyfish/vanilla-js/blob/master/spa-navigation/) | [Demo](https://icyfish.github.io/vanilla-js/spa-navigation/)
+
 - 简单的书签应用 | [Code](https://github.com/icyfish/vanilla-js/blob/master/bookmarker/) | [Demo](https://icyfish.github.io/vanilla-js/bookmarker/)
 
 - 贪吃蛇(简单版)原始版 | [Code](https://github.com/icyfish/vanilla-js/blob/master/snake-game/prototype.html) | [Demo](https://icyfish.github.io/vanilla-js/snake-game/prototype.html)
